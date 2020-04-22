@@ -1,0 +1,148 @@
+{{!-- Search Form --}}
+<section class="search_bg">
+  <h1 class="search_title">Book homes, hotels, and more on <span class="highlight">Airbnb.</span> </h1>
+  <form class="search">
+    WHERE 
+    <input type="text" name="where" placeholder="Anyware">
+    CHECK-IN: 
+    <input type="date" name="checkin">
+    CHECK-OUT: 
+    <input type="date" name="checkin">
+    GUESTS: 
+    <div class="guests">
+      <select name="guests">
+        <option>1 guest</option>
+        <option>2 guest</option>
+        <option>3 guest</option>
+        <option>4 guest</option>
+        <option>5 guest</option>
+        <option>6 guest</option>
+        <option>7 guest</option>
+        <option>8 guest</option>
+        <option>9 guest</option>
+        <option>10 guest</option>
+        <option>10+ guest</option>
+      </select>
+    </div>
+    <input type="submit" value="Search" class="search_btn">
+  </form>
+</section>
+
+
+{{!-- Featured Listing --}}
+<h2 class="room-title">Our Featured Rooms</h2>
+<section class="listing-box">
+  {{#each Room}}
+  <div class="room">
+      <img class="room-img" src="{{this.image}}" alt="featured room images">
+      <h2>
+          {{this.title}}
+          <div class="style-under"></div>
+      </h2>
+      <p>{{this.price}} CAD / night</p>
+      <a href="{{this.link}}">
+          <div class="more-btn">
+              <div class="btn-txt">Learn More</div>
+          </div>
+      </a>
+  </div>
+  {{/each}}
+</section>
+
+{{!-- Promotional Section --}}
+<section class="promo-section">
+  <ul class="slider">
+    <li class="slider-item active">
+      <div class="vertical">
+        <div class="intro">
+          <a href="#">
+            <h1 class="title"><span class="underline">Up To $100 Off First Booking By Creating New Account</span></h1>
+          </a>
+          </div>
+        <div class="image-holder">
+          <img src="https://images.unsplash.com/photo-1581294880649-d73698539955?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1598&q=80" alt="beach">
+          </div>
+        <p class="description"> Find great places to stay, eat, shop or visit on. </p>
+      </div>
+    </li>
+
+    <li class="slider-item">
+      <div class="vertical">
+        <div class="intro">
+          <a href="#">
+            <h1 class="title"><span class="underline">$40 Off Your First Stay</span></h1>
+          </a>
+        </div>
+        <div class="image-holder">
+          <img src="https://images.unsplash.com/photo-1570481315879-4569a74233c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80" alt="uk">
+        </div>
+        <p class="description">Away from monotonous life. </p>
+      </div>
+    </li>
+
+    <li class="slider-item">
+      <div class="vertical">
+        <div class="intro">
+          <a href="#">
+            <h1 class="title"><span class="underline">55% Off Select Bookings of $75+</span></h1>
+          </a>
+        </div>
+        <div class="image-holder">
+          <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="germany">
+        </div>
+        <p class="description">Enjoy full kitchens, laundry, pools, yards and more. </p>
+      </div>
+    </li>
+
+    <li class="slider-item">
+      <div class="vertical">
+        <div class="intro">
+          <a href="#">
+            <h1 class="title"><span class="underline">15% Off In February 2020</span></h1>
+          </a>
+        </div>
+        <div class="image-holder">
+          <img src="https://images.unsplash.com/photo-1550115368-e1ff1a089465?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=694&q=80" alt="us">
+        </div>
+        <p class="description">Making the most out of your holiday.</p>
+        </div>
+    </li>
+    </ul>
+
+    <div class="controls">
+    <button class="slideBtn previous">
+    <p><</p>
+    </a>
+    <button class="slideBtn next">
+    <p>></p>
+    </a>
+  </div>
+</section>
+
+{{!-- Informational Section --}}
+<section class="section-testimonials">
+    <h2>Our customers can't live without us</h2>
+
+  <div class="row">
+    <div class="review_one">
+      <blockquote>
+      My experience thus far has been positive. I have pre-booked my stays months in advance for my stays in Puerto Rico, Hawaii, Philippines, Thailand, and India. I have not yet been disappointed. Listings have been accurate, hosts have been accommodating, and the checkin process has been trouble free.
+      <cite><img src="/img/customer-1.jpg" alt="Customer 1 photo">Alberto Duncan</cite>
+      </blockquote>
+    </div>
+
+    <div class="review_two">
+      <blockquote>
+      The app works very well and makes it easy to search for options. In particular, the filters and list vs. map views are very helpful.
+      <cite><img src="/img/customer-2.jpg" alt="Customer 2 photo">Joana Silva</cite>
+      </blockquote>
+    </div>
+    
+    <div class="review_three">
+      <blockquote>
+      I love being able to save on housing needs especially compared to hotel stays or other living arrangements.
+      <cite><img src="/img/customer-3.jpg" alt="Customer 3 photo">Milton Chapman</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>

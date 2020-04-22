@@ -1,0 +1,12 @@
+        <nav>
+            <ul>
+                <li class="logo"><a href="/">Airbnb<span class="highlight">.</span></a></li>
+                <li><a href="/about">Room Listings</a></li>
+                {{#if user }}
+                     <li><a href="/user/logout">Logout </a></li>
+                {{else}}
+                   <li><a href="/user/login">Login</a></li>
+                   <li><a href="/user/register">Registration </a></li>
+                {{/if}}
+            </ul>
+        </nav>

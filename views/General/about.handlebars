@@ -1,0 +1,27 @@
+<section class="listings">
+
+ <form method="POST" action="/task/search">
+        <label>Search By</label>
+        <select name="task-search">
+                <option value="all">All Location</option>
+                <option value="toronto">Toronto</option>
+                <option value="vancouver">Vancouver</option>
+                <option value="quebec">Quebec</option>
+        </select>
+        <input type="submit" value="Search">
+     </form> <br><br>
+
+    <div class="wrapper">
+        {{#each room}}
+        <div class="item">
+            <img src="{{this.image}}" alt="rental place image" class="rental_img">
+            <h3 class="rental_name"> {{this.name}} </h3> 
+            <p class="category"> {{this.category}}</p>
+            <p class="price"> ${{this.price}} CAD/night</p>
+            <p class="review"> ⭐️{{this.review}} </p>
+            <p class="host"> {{this.host}} host</p>
+        </div>
+        {{/each}}
+    </div>
+</section>
+
