@@ -69,11 +69,9 @@ mongoose.connect(process.env.MONGO_DB_CONNECTION_STRING, {useNewUrlParser: true,
 
 
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT,()=>{
-    console.log(`Your Web Server has been connected`);
-    
-});
+http.listen(process.env.PORT || 3000, function(){
+    console.log('listening on', http.address().port);
+  });
 
 
 
